@@ -1,0 +1,74 @@
+Question No2
+
+Write a Python program to create an advanced student marksheet. The program should:
+
+1-Ask the user to enter the student's name and roll number.
+2-Input marks for 5 subjects.
+3-Calculate the total marks and percentage.
+4-Determine the grade according to:
+o 80–100% → A+
+o 70–79% → A
+o 60–69% → B
+o 50–59% → C
+o 40–49% → D
+o Below 40% → F
+5-Check whether the student passed or failed.
+6-If the student scores below 40 in any subject, declare the student a Fail regardless of the overall percentage.
+7-Display a complete marksheet containing the student's information, such as name and roll no., subject marks, total, percentage, grade, and result
+
+code:
+
+name =(str(input("Enter studenr name:")))
+rollnumb=(int(input("Enter roll no:")))
+
+marks1=(int(input("Enter java marks:")))
+marks2=(int(input("Enter IOT marks:")))
+marks3=(int(input("Enter quran marks:")))
+marks4=(int(input("Enter English marks:")))
+marks5=(int(input("Enter Maths marks:")))
+
+Total_marks = marks1+marks2+marks3+marks4+marks5
+print("Total marks:",Total_marks)
+
+percentage = Total_marks/500*100
+print("Percenrage:",percentage)
+
+
+
+if  percentage  >=80:
+  grade("A+")
+  
+elif percentage >= 70:
+  grade="A"
+  
+elif percentage >=60:
+  grade = "B"
+
+elif percentage >=50 :
+  grade="C"
+
+elif percentage >=40:
+  grade="D"
+
+else:
+  grade=("fail")
+
+if marks1< 40 or marks2<40 or marks3<40 or marks4<40 or marks5<40:
+  result = "Fail"
+else:
+  result="Pass"
+
+
+
+print("----Student report card---")
+print("Name:",name)
+print("Roll numb:",rollnumb)
+print("Java marks:",marks1)
+print("IOT marks:",marks2)
+print("Quran marks:",marks3)
+print("English marks:",marks4)
+print("Maths marks:",marks5)
+print("Total marks:",Total_marks)
+print("percentage :",percentage)
+print("Grade:",grade)
+print("Result:",result)
